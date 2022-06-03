@@ -15,7 +15,8 @@ public class ProductoControllers {
 
     @Autowired
     private ProductoRepository productoRepository;
-    private Message message = new Message();
+    @Autowired
+    private util.Message message = new util.Message();
 
     @RequestMapping(value = "api/productos/{id}", method = RequestMethod.GET)
     public Optional<Producto> getProducto(@PathVariable Long id){
@@ -45,7 +46,7 @@ public class ProductoControllers {
 
 
     @RequestMapping(value = "api/productos", method = RequestMethod.GET)
-    public List<Producto> listProductos() {
+    public List<Producto> listProducto() {
         return productoRepository.findAll();
     }
 
@@ -62,9 +63,9 @@ public class ProductoControllers {
             producto.setFechavencProducto(newProducto.getFechavencProducto());
             productoRepository.save(producto);
 
-            return message.viewMessage(HttpStatus.OK,"success","user edit success!!");
+            return message.viewMessage(HttpStatus.OK,"success","producto edit success!!");
         }catch (Exception e){
-            return message.viewMessage(HttpStatus.NOT_FOUND,"error","User not found!");
+            return message.viewMessage(HttpStatus.NOT_FOUND,"error","producto not found!");
         }
     }
     @RequestMapping(value = "api/productos/{id}", method = RequestMethod.DELETE)
@@ -73,9 +74,9 @@ public class ProductoControllers {
         try {
             Producto producto = productoRepository.findById(id).get();
             productoRepository.delete(producto);
-            return message.viewMessage(HttpStatus.OK,"success","user delete success!!");
+            return message.viewMessage(HttpStatus.OK,"success","producto delete success!!");
         }catch (Exception e){
-            return message.viewMessage(HttpStatus.NOT_FOUND,"error","User not found!");
+            return message.viewMessage(HttpStatus.NOT_FOUND,"error","producto not found!");
         }
 
 

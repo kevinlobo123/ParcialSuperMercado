@@ -36,14 +36,14 @@ function listar(){
         //if(data.lenght>0){
             var productos = '';
             for(const producto of data){
-                console.log(usuario.numeroPro)
-                usuarios += '<tr>'+
+                console.log(producto.numeroPro)
+                productos += '<tr>'+
                 '<th scope="row">'+producto.id+'</th>'+
-                '<td>'+usuario.numeroPro+'</td>'+
-                '<td>'+usuario.nombre+'</td>'+
-                '<td>'+usuario.descripProducto+'</td>'+
-                '<td>'+usuario.valorProducto+'</td>'+
-                '<td>'+usuario.fechavencProducto+'</td>'+
+                '<td>'+producto.numeroPro+'</td>'+
+                '<td>'+producto.nombre+'</td>'+
+                '<td>'+producto.descripProducto+'</td>'+
+                '<td>'+producto.valorProducto+'</td>'+
+                '<td>'+producto.fechavencProducto+'</td>'+
                 '<td>'+
                   '<button type="button" class="btn btn-outline-danger" onclick="eliminaUsuario(\''+producto.id+'\')"><i class="fa-solid fa-user-minus"></i></button>'+
                   '<a href="#" onclick="verModificarUsuario(\''+producto.id+'\')" class="btn btn-outline-warning"><i class="fa-solid fa-user-pen"></i></a>'+

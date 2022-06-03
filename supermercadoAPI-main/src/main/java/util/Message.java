@@ -1,4 +1,4 @@
-package com.proyecto.app.util;
+package util;
 
 import lombok.Data;
 import org.springframework.http.HttpStatus;
