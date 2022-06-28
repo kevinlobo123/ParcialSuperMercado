@@ -27,5 +27,9 @@ public class Producto {
 
     @Column(nullable = false, length = 10)
     private String fechavencProducto;
+
+
+
+
 }
 
