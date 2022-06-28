@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar los Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header">
+            <h1>Registrar un Producto</h1>
+        </div>
+        <div class="card-body">
+            <form action="" method="post" id="myForm">
+
+                <input type="hidden" id="metodo" name="metodo" value="POST">
+                <label for="numeroPro" class="form-label">Numero del Producto</label>
+                <input type="number" class="form-control" name="numeroPro" id="numeroPro" required> <br>
+                <label for="nombre" class="form-label">Nombre del Producto</label>
+                <input type="text" class="form-control" name="nombre" id="nombre" required> <br>
+                <label for="descripProducto" class="form-label">Descripcion del Producto</label>
+                <input type="text" class="form-control" name="descripProducto" id="descripProducto" required> <br>
+                <label for="valorProducto" class="form-label">Valor de Producto</label>
+                <input type="text" class="form-control"id="valorProducto" name="valorProducto" required> <br>
+                <label for="fechavencProducto" class="form-label">Fecha vencimiento del Producto</label>
+                <input type="number" class="form-control" name="fechavencProducto" id="fechavencProducto" required> <br>
+
+
+                <button type="button" class="btn btn-info" onclick="sendData('api/productos')">Registrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="js/local.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
