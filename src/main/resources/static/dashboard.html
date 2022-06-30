@@ -8,7 +8,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Kevin Lobo</a>
+        <a class="navbar-brand" href="#">Bienvenido</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -36,7 +36,7 @@
             <div id ="datos"> </div>
             <div class="p-3 mb-2 bg-secondary text-white"><h1 class="display-5"><i class="fa-solid fa-list"></i>Listado de Productos</h1></div>
 
-            <a href="register.html" class="btn btn-outline-success"><i class="fa-solid fa-user-plus"></i></a>
+            <a href="registrar.html" class="btn btn-outline-success"><i class="fa-solid fa-cart-plus"></i></a>
             <table class="table table-hover">
 
                 <thead>
@@ -47,15 +47,43 @@
                     <th scope="col">descripProducto</th>
                     <th scope="col">valorProducto</th>
                     <th scope="col">fechavencProducto</th>
+                    <th scope="col">Email</th>
 
                 </tr>
                 </thead>
                 <tbody id = "listar">
+                <tbody id = "listUsuario">
 
+                </tbody>
                 </tbody>
             </table>
         </div>
     </div>
+</div>
+
+<div class="card-body">
+    <div id ="datos_1"> </div>
+    <div class="p-3 mb-2 bg-secondary text-white"><h1 class="display-5"><i class="fa-solid fa-list"></i>Listado de Usuarios</h1></div>
+
+    <a href="registrarUser.html" class="btn btn-outline-success"><i class="fa-solid fa-user-plus"></i></a>
+    <table class="table table-hover">
+
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Action</th>
+
+        </tr>
+        </thead>
+        <tbody id = "listUsuario">
+
+        </tbody>
+    </table>
+</div>
+</div>
 </div>
 
 
@@ -63,6 +91,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script>
           listar();
+          listUsuario();
         </script>
 <!-- Modal -->
 <div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -78,5 +107,20 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="modalUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Gestion de Usuarios</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="contentModal_1">
+
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>

@@ -26,10 +26,10 @@ public class ProductoRepositoryTests {
         public void testCreateProducto(){
         Producto producto = new Producto();
         producto.setNumeroPro(Integer.parseInt("12345"));
-        producto.setNombre("Arroz");
+        producto.setNombre("Cebada");
         producto.setDescripProducto("Granos");
-        producto.setValorProducto(Double.parseDouble("3700"));
-        producto.setFechavencProducto("30/08/2023");
+        producto.setValorProducto(Double.parseDouble("4000"));
+        producto.setFechavencProducto("05/12/2023");
 
         Producto savedProducto = repository.save(producto);
         Producto existProducto = entityManager.find(Producto.class, savedProducto.getId());
